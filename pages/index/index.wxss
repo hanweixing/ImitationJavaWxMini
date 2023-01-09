@@ -1,0 +1,133 @@
+/* 搜索 */
+.search-container {
+  width: 100%;
+  height: 112rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.search-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(246, 245, 245);
+  height: 70rpx;
+  margin: 0 40rpx;
+  padding: 0 20rpx;
+  border-radius: 35rpx;
+}
+.search-icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+.search-text {
+  margin-left: 8rpx;
+  font-size: 24rpx;
+  color: rgb(128, 128, 128);
+}
+.swiper-container {
+  position: relative;
+}
+/* 轮播 */
+.banner {
+  width: 750rpx;
+  height: 300rpx;
+}
+.banner image {
+  width: 100%;
+  height: 300rpx;
+}
+.banner-item {
+  position: relative;
+}
+.banner-item-gradient {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100rpx;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+}
+.banner-indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8rpx;
+}
+.banner-indicator-normal {
+  width: 20rpx;
+  height: 4rpx;
+  background-color: rgba(255,255,255,0.4);
+  margin-right: 8rpx;
+}
+.banner-indicator-active {
+  width: 40rpx;
+  height: 4rpx;
+  background-color: #fff;
+}
+
+/* 中间层 */
+.menu-container {
+  height: 200rpx;
+  margin-top: 20rpx;
+  padding: 0 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.menu-item-title {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: rgb(128, 128, 128);
+}
+
+/* section */
+.section-item {
+  margin-top: 40rpx;
+}
+.section-item-header {
+  height: 80rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-item-pool {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-item-pool-item {
+  width: 45%;
+  height: 180rpx;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  background-color: rgb(178, 126, 70);
+  border-radius: 20rpx;
+
+  box-sizing: border-box;
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+/* 底部 */
+.occupying {
+  background-color: transparent;
+  height: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+  height: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+}

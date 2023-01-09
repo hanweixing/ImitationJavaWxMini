@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-container">
+    <view class="search-content" bindtap="onClickSearch">
+      <image src="https://cdn.wanwudezhi.com/static/web-static/image/50413534603e9334f40dafb94e408e69_60x60.png" class="search-icon"></image>
+      <view class="search-text">搜索你想了解的面试问题，1000+面试题</view>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="swiper-container">
+    <swiper class="banner" autoplay="true" interval="3000" duration="500" bindchange="onChangeIndicatorDots">
+      <swiper-item wx:for="{{banner}}" wx:key="id">
+        <!-- <navigator url="{{item.link}}"> -->
+          <view class="banner-item">
+            <image src="{{item.url}}" background-size="cover"></image>
+            <!-- 底部渐变色背景 -->
+            <view class="banner-item-gradient">
+            </view>
+          </view>
+        <!-- </navigator> -->
+      </swiper-item>
+    </swiper>
+    <!-- 滚动条 -->
+    <view class="banner-indicator">
+      <view wx:for="{{banner}}" wx:key="id" class="banner-indicator-normal {{ currentSwiper === index ? 'banner-indicator-active' : ''}}"></view>
+    </view>
+  </view>
+  <!-- 中间层 -->
+  <view class="menu-container">
+    <view wx:for="{{menuItems}}" wx:key="id" class="menu-item">
+      <image src="{{item.url}}" class="menu-item-icon"></image>
+      <view class="menu-item-title">{{item.title}}</view>
+    </view>
+  </view>
+  <!-- section -->
+  <view wx:for="{{sections}}" wx:key="index" class="section-item">
+    <view class="section-item-header">
+      <view>{{item.title}}</view>
+      <view wx:if="{{item.products.length > 2}}">更多></view>
+    </view>
+    <view class="section-item-pool">
+      <view wx:for="{{item.products}}" wx:for-item="product" wx:key="title" class="section-item-pool-item" style="background-color: {{product.bgColor}}">
+        <view>{{product.title}}</view>
+        <view>{{product.count}}+</view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部填充 -->
+  <view class="occupying"></view>
+</view>
