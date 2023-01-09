@@ -1,5 +1,5 @@
 
-帮人写的一个模仿java微信小程序的代码而已。
+帮人写的一个模仿java微信小程序的代码而已。效果可以去当前仓库的wiki中看预览就好.
 
 内部功能：
 1. 渲染md，使用了github中搜索的md渲染git：https://github.com/TooBug/wemark
